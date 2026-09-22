@@ -1,0 +1,13 @@
+{
+  "name": "stage-rig-cue-rehearsal",
+  "version": "1.0.0",
+  "description": "舞台吊杆 Cue 预演台：纯 Node 20（无第三方依赖）+ 原生前端",
+  "type": "module",
+ "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

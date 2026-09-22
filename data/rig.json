@@ -1,0 +1,34 @@
+{
+  "units": {
+    "height": "m",
+    "speed": "m/s",
+    "time": "s",
+    "mass": "kg",
+    "force": "N"
+  },
+  "constants": {
+    "gravity": 9.81,
+    "syncWaitToleranceSec": 3
+  },
+  "stage": {
+    "width": 20,
+    "heightMin": 0,
+    "heightMax": 16,
+    "floorY": 16
+  },
+  "note": "height 为吊杆距栅顶的下放米数：0=栅顶（最高），16=台板（最低）。配重平衡电机侧静载；过载按吊点侧有效拉力 payload*(1+a/g)（a 向下为正）对 ratedLoad 判定。",
+  "battens": [
+    { "id": "B01", "name": "一道灯杆", "type": "electric", "minHeight": 0, "maxHeight": 16, "homeHeight": 0, "ratedLoad": 400, "counterWeight": 300 },
+    { "id": "B02", "name": "一幕杆", "type": "soft", "minHeight": 0, "maxHeight": 16, "homeHeight": 0, "ratedLoad": 200, "counterWeight": 150 },
+    { "id": "B03", "name": "二道灯杆", "type": "electric", "minHeight": 0, "maxHeight": 16, "homeHeight": 0, "ratedLoad": 400, "counterWeight": 300 },
+    { "id": "B04", "name": "二幕杆", "type": "soft", "minHeight": 0, "maxHeight": 16, "homeHeight": 0, "ratedLoad": 350, "counterWeight": 260 },
+    { "id": "B05", "name": "三道灯杆", "type": "electric", "minHeight": 0, "maxHeight": 16, "homeHeight": 0, "ratedLoad": 400, "counterWeight": 300 },
+    { "id": "B06", "name": "侧灯杆", "type": "electric", "minHeight": 0, "maxHeight": 15, "homeHeight": 2, "ratedLoad": 350, "counterWeight": 260 },
+    { "id": "B07", "name": "景片杆甲", "type": "scenic", "minHeight": 0, "maxHeight": 16, "homeHeight": 2, "ratedLoad": 450, "counterWeight": 320 },
+    { "id": "B08", "name": "景片杆乙", "type": "scenic", "minHeight": 0, "maxHeight": 16, "homeHeight": 2, "ratedLoad": 290, "counterWeight": 210 },
+    { "id": "B09", "name": "檐幕杆", "type": "soft", "minHeight": 0, "maxHeight": 14, "homeHeight": 2, "ratedLoad": 300, "counterWeight": 220 },
+    { "id": "B10", "name": "四道灯杆", "type": "electric", "minHeight": 0, "maxHeight": 16, "homeHeight": 2, "ratedLoad": 400, "counterWeight": 300 },
+    { "id": "B11", "name": "天幕杆", "type": "soft", "minHeight": 0, "maxHeight": 15, "homeHeight": 4, "ratedLoad": 300, "counterWeight": 220 },
+    { "id": "B12", "name": "备用杆", "type": "scenic", "minHeight": 0, "maxHeight": 16, "homeHeight": 4, "ratedLoad": 500, "counterWeight": 350 }
+  ]
+}

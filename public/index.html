@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>舞台吊杆 Cue 预演台</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>舞台吊杆 Cue 预演台</h1>
+    <div class="status" id="loadStatus">正在加载 data/rig.json、data/cues.json …</div>
+  </header>
+
+  <main class="layout">
+    <section class="panel stage-panel">
+      <h2>舞台剖面</h2>
+      <div class="legend">
+        <span class="dot dot-normal"></span>正常
+        <span class="dot dot-moving"></span>运行中
+        <span class="dot dot-overload"></span>配重过载
+        <span class="dot dot-laggard"></span>联动拖后腿
+      </div>
+      <div id="stageView"></div>
+    </section>
+
+    <section class="panel timeline-panel">
+      <h2>Cue 时间轴（拖拽卡片换序，或用 ↑ ↓ 按钮）</h2>
+      <div id="cueList" class="cue-list"></div>
+      <div id="timelineView"></div>
+      <div class="transport">
+        <button id="btnPlay" type="button">▶ 整段预演</button>
+        <button id="btnPause" type="button">⏸ 暂停</button>
+        <button id="btnReset" type="button">⏮ 复位</button>
+        <label>倍速
+          <select id="playSpeed">
+            <option value="1">1×</option>
+            <option value="2">2×</option>
+            <option value="4">4×</option>
+            <option value="0.5">0.5×</option>
+          </select>
+        </label>
+        <span class="clock">当前时刻 <b id="clockText">0.0s</b> / <span id="totalText">0.0s</span></span>
+        <button id="btnSubmit" class="primary" type="button">提交预演</button>
+      </div>
+      <div id="submitResult" class="submit-result"></div>
+    </section>
+
+    <section class="panel detail-panel">
+      <h2>逐步计算过程</h2>
+      <div id="stepLog" class="step-log"></div>
+    </section>
+
+    <section class="panel summary-panel">
+      <h2>跑完汇总</h2>
+      <div class="summary-grid">
+        <div>
+          <h3>冲突清单（<span id="conflictCount">0</span> 条）</h3>
+          <ol id="conflictList" class="conflict-list"></ol>
+        </div>
+        <div>
+          <h3>等待最久的吊杆</h3>
+          <ol id="waitList" class="wait-list"></ol>
+          <p class="longest">最长等待时间：<b id="longestWait">0s</b></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

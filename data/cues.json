@@ -1,0 +1,75 @@
+{
+  "note": "样例 Cue 表：Q2 的 B02、Q5 的 B08 各埋了一处加速下放吊点拉力超额定；Q4 的 B03/B06 为联动速度不同步（等待 47s）。height 与 rig 中 minHeight/maxHeight 同一坐标系。",
+  "cues": [
+    {
+      "id": "Q1",
+      "name": "开场布光",
+      "linked": false,
+      "moves": [
+        { "battenId": "B01", "startHeight": 0, "endHeight": 6, "speed": 0.8, "accelTime": 2, "decelTime": 2, "payload": 100 }
+      ]
+    },
+    {
+      "id": "Q2",
+      "name": "一幕进场",
+      "linked": false,
+      "moves": [
+        { "battenId": "B02", "startHeight": 0, "endHeight": 10, "speed": 0.6, "accelTime": 1, "decelTime": 1, "payload": 195 },
+        { "battenId": "B04", "startHeight": 0, "endHeight": 8, "speed": 0.7, "accelTime": 2, "decelTime": 2, "payload": 140 }
+      ]
+    },
+    {
+      "id": "Q3",
+      "name": "一道三道灯齐落",
+      "linked": true,
+      "moves": [
+        { "battenId": "B01", "startHeight": 6, "endHeight": 12, "speed": 0.5, "accelTime": 2, "decelTime": 2, "payload": 100 },
+        { "battenId": "B05", "startHeight": 0, "endHeight": 6, "speed": 0.5, "accelTime": 2, "decelTime": 2, "payload": 100 }
+      ]
+    },
+    {
+      "id": "Q4",
+      "name": "二灯与侧灯联动",
+      "linked": true,
+      "moves": [
+        { "battenId": "B03", "startHeight": 0, "endHeight": 10, "speed": 0.2, "accelTime": 4, "decelTime": 4, "payload": 120 },
+        { "battenId": "B06", "startHeight": 2, "endHeight": 6, "speed": 0.8, "accelTime": 2, "decelTime": 2, "payload": 120 }
+      ]
+    },
+    {
+      "id": "Q5",
+      "name": "景片乙急降",
+      "linked": false,
+      "moves": [
+        { "battenId": "B08", "startHeight": 2, "endHeight": 12, "speed": 0.6, "accelTime": 1, "decelTime": 1, "payload": 285 }
+      ]
+    },
+    {
+      "id": "Q6",
+      "name": "景甲与檐幕联动",
+      "linked": true,
+      "moves": [
+        { "battenId": "B07", "startHeight": 2, "endHeight": 8, "speed": 0.4, "accelTime": 2, "decelTime": 2, "payload": 140 },
+        { "battenId": "B09", "startHeight": 2, "endHeight": 5, "speed": 0.2, "accelTime": 2, "decelTime": 2, "payload": 140 }
+      ]
+    },
+    {
+      "id": "Q7",
+      "name": "四道灯定位",
+      "linked": false,
+      "moves": [
+        { "battenId": "B10", "startHeight": 2, "endHeight": 10, "speed": 0.8, "accelTime": 2, "decelTime": 2, "payload": 120 }
+      ]
+    },
+    {
+      "id": "Q8",
+      "name": "收尾三杆齐收",
+      "linked": true,
+      "moves": [
+        { "battenId": "B08", "startHeight": 12, "endHeight": 5, "speed": 0.7, "accelTime": 2, "decelTime": 2, "payload": 120 },
+        { "battenId": "B11", "startHeight": 4, "endHeight": 7, "speed": 0.4, "accelTime": 2, "decelTime": 2, "payload": 120 },
+        { "battenId": "B12", "startHeight": 4, "endHeight": 14, "speed": 1.0, "accelTime": 2, "decelTime": 2, "payload": 120 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  background: #14181f;
+  color: #e6e9ef;
+}
+
+.topbar {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding: 12px 20px;
+  background: #1d232d;
+  border-bottom: 1px solid #2c3542;
+}
+
+.topbar h1 { font-size: 18px; margin: 0; }
+.status { color: #8b95a5; font-size: 13px; }
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(560px, 1.2fr) 1fr;
+  gap: 14px;
+  padding: 14px;
+}
+
+.panel {
+  background: #1b212b;
+  border: 1px solid #2c3542;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.panel h2 { font-size: 14px; margin: 0 0 10px; color: #cdd5e1; }
+.panel h3 { font-size: 13px; margin: 12px 0 6px; color: #9fb0c6; }
+
+.legend { display: flex; gap: 14px; font-size: 12px; color: #9aa6b6; margin-bottom: 8px; flex-wrap: wrap; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+.dot-normal { background: #5b8def; }
+.dot-moving { background: #f0b429; }
+.dot-overload { background: #e5484d; }
+.dot-laggard { background: #b061ff; }
+
+#stageView svg { width: 100%; height: auto; display: block; background: #10141b; border-radius: 6px; }
+
+.cue-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.cue-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  background: #232b38;
+  border: 1px solid #33404f;
+  border-radius: 6px;
+  cursor: grab;
+  font-size: 13px;
+}
+.cue-card.dragging { opacity: 0.5; }
+.cue-card.drag-over { border-color: #5b8def; box-shadow: inset 0 0 0 1px #5b8def; }
+.cue-card .cue-id { font-weight: bold; min-width: 30px; }
+.cue-card .cue-name { flex: 1; }
+.cue-card .cue-time { color: #8b95a5; font-size: 12px; }
+.cue-card.blocking { border-color: #e5484d; background: #332327; }
+.cue-card.laggard-card { border-left: 3px solid #b061ff; }
+.cue-card button {
+  background: #2e3947; color: #e6e9ef; border: 1px solid #3d4a5a;
+  border-radius: 4px; cursor: pointer; padding: 1px 7px; font-size: 12px;
+}
+.cue-card button:hover { background: #3a4757; }
+.tag { font-size: 11px; padding: 1px 6px; border-radius: 8px; }
+.tag-link { background: #2e2b47; color: #b9a9ff; }
+.tag-block { background: #4a2629; color: #ff8f93; }
+
+#timelineView { overflow-x: auto; margin-bottom: 10px; }
+#timelineView svg { display: block; }
+
+.transport { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.transport button {
+  background: #2e3947; color: #e6e9ef; border: 1px solid #3d4a5a;
+  border-radius: 5px; padding: 6px 12px; cursor: pointer; font-size: 13px;
+}
+.transport button:hover { background: #3a4757; }
+.transport button.primary { background: #1f5fd6; border-color: #2f70e6; }
+.transport button.primary:disabled { background: #3a3f47; border-color: #444; color: #8b95a5; cursor: not-allowed; }
+.clock { font-size: 13px; color: #aeb8c6; margin-left: auto; }
+select { background: #232b38; color: #e6e9ef; border: 1px solid #3d4a5a; border-radius: 4px; padding: 3px; }
+
+.submit-result { margin-top: 8px; font-size: 13px; min-height: 18px; }
+.submit-result.ok { color: #4ecb71; }
+.submit-result.bad { color: #ff8f93; }
+
+.step-log {
+  max-height: 520px;
+  overflow-y: auto;
+  font-size: 12px;
+  line-height: 1.55;
+  background: #10141b;
+  border-radius: 6px;
+  padding: 10px;
+  font-variant-numeric: tabular-nums;
+}
+.step-cue { color: #7fa8f5; font-weight: bold; margin-top: 8px; }
+.step-line { color: #b7c0cf; }
+.step-warn { color: #f0b429; }
+.step-over { color: #ff7a7f; }
+.step-ok { color: #4ecb71; }
+
+.summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.conflict-list, .wait-list { margin: 0; padding-left: 18px; font-size: 12.5px; line-height: 1.6; }
+.conflict-list li.over { color: #ff8f93; }
+.conflict-list li.sync { color: #d6b3ff; }
+.conflict-list li.cont, .conflict-list li.range { color: #f0b429; }
+.wait-list li { color: #aeb8c6; }
+.wait-list .wait-bar { display: inline-block; height: 7px; background: #5b8def; border-radius: 3px; vertical-align: middle; margin-left: 6px; }
+.longest { font-size: 13px; color: #cdd5e1; }
+
+.playhead-line { stroke: #f0b429; stroke-width: 1.5; }
+.over-seg { fill: #e5484d; opacity: 0.85; }
+.cue-block-rect { fill: #2e3947; stroke: #46586d; }
+.cue-block-rect.linked { fill: #35304d; stroke: #6a55a8; }
+.cue-label { fill: #dfe6f0; font-size: 11px; }
+.grid-line { stroke: #26303d; stroke-width: 1; }
