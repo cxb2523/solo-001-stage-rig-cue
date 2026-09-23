@@ -1,0 +1,114 @@
+[
+  {
+    "id": "C1",
+    "name": "开幕吊景",
+    "groups": [
+      {
+        "name": "檐幕与天幕",
+        "linked": false,
+        "moves": [
+          { "batten": "B1", "from": 2, "to": 8, "speed": 0.8, "accelTime": 2.0 },
+          { "batten": "B6", "from": 3, "to": 7, "speed": 0.8, "accelTime": 2.0 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "C2",
+    "name": "灯光就位",
+    "groups": [
+      {
+        "name": "面光侧光联动",
+        "linked": true,
+        "moves": [
+          { "batten": "B10", "from": 9, "to": 4, "speed": 0.8, "accelTime": 1.5 },
+          { "batten": "B11", "from": 9, "to": 4, "speed": 0.8, "accelTime": 1.5 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "C3",
+    "name": "快换景",
+    "groups": [
+      {
+        "name": "二道幕急升",
+        "linked": false,
+        "moves": [
+          { "batten": "B5", "from": 4, "to": 9, "speed": 1.2, "accelTime": 0.5 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "C4",
+    "name": "纱幕升降",
+    "groups": [
+      {
+        "name": "纱幕组",
+        "linked": false,
+        "moves": [
+          { "batten": "B7", "from": 5, "to": 9, "speed": 0.8, "accelTime": 1.5 },
+          { "batten": "B8", "from": 5, "to": 2, "speed": 0.8, "accelTime": 1.5 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "C5",
+    "name": "三道檐幕联动",
+    "groups": [
+      {
+        "name": "檐幕联动组",
+        "linked": true,
+        "moves": [
+          { "batten": "B2", "from": 6, "to": 10, "speed": 0.8,  "accelTime": 1.5 },
+          { "batten": "B3", "from": 6, "to": 10, "speed": 0.8,  "accelTime": 1.5 },
+          { "batten": "B4", "from": 6, "to": 10, "speed": 0.35, "accelTime": 1.5 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "C6",
+    "name": "天幕灯急降",
+    "groups": [
+      {
+        "name": "天幕灯急降",
+        "linked": false,
+        "moves": [
+          { "batten": "B9", "from": 8, "to": 3, "speed": 1.0, "accelTime": 0.4 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "C7",
+    "name": "换场联动",
+    "groups": [
+      {
+        "name": "换场联动组",
+        "linked": true,
+        "moves": [
+          { "batten": "B1",  "from": 8, "to": 3, "speed": 0.8, "accelTime": 1.5 },
+          { "batten": "B6",  "from": 7, "to": 2, "speed": 0.8, "accelTime": 1.5 },
+          { "batten": "B12", "from": 1, "to": 6, "speed": 0.8, "accelTime": 1.5 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "C8",
+    "name": "谢幕复位",
+    "groups": [
+      {
+        "name": "复位组",
+        "linked": false,
+        "moves": [
+          { "batten": "B5", "from": 9, "to": 5, "speed": 0.5, "accelTime": 2.0 },
+          { "batten": "B9", "from": 3, "to": 7, "speed": 0.5, "accelTime": 2.0 }
+        ]
+      }
+    ]
+  }
+]

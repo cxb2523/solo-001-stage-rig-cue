@@ -1,0 +1,21 @@
+{
+  "stage": {
+    "name": "示例剧场主舞台",
+    "gridHeight": 12,
+    "note": "gridHeight 为吊杆行程上限（米），台面为 0"
+  },
+  "battens": [
+    { "id": "B1",  "name": "一道檐幕杆", "ratedLoad": 250, "payload": 230, "counterweight": 220, "homeHeight": 2 },
+    { "id": "B2",  "name": "二道檐幕杆", "ratedLoad": 250, "payload": 240, "counterweight": 235, "homeHeight": 6 },
+    { "id": "B3",  "name": "三道檐幕杆", "ratedLoad": 250, "payload": 240, "counterweight": 235, "homeHeight": 6 },
+    { "id": "B4",  "name": "边幕杆",     "ratedLoad": 200, "payload": 180, "counterweight": 170, "homeHeight": 6 },
+    { "id": "B5",  "name": "二道幕杆",   "ratedLoad": 150, "payload": 420, "counterweight": 300, "homeHeight": 4 },
+    { "id": "B6",  "name": "天幕杆",     "ratedLoad": 300, "payload": 260, "counterweight": 250, "homeHeight": 3 },
+    { "id": "B7",  "name": "纱幕杆",     "ratedLoad": 220, "payload": 200, "counterweight": 195, "homeHeight": 5 },
+    { "id": "B8",  "name": "前纱幕杆",   "ratedLoad": 220, "payload": 190, "counterweight": 185, "homeHeight": 5 },
+    { "id": "B9",  "name": "天幕灯杆",   "ratedLoad": 160, "payload": 380, "counterweight": 260, "homeHeight": 8 },
+    { "id": "B10", "name": "面光灯杆",   "ratedLoad": 350, "payload": 320, "counterweight": 310, "homeHeight": 9 },
+    { "id": "B11", "name": "侧光灯杆",   "ratedLoad": 350, "payload": 330, "counterweight": 320, "homeHeight": 9 },
+    { "id": "B12", "name": "景片杆",     "ratedLoad": 280, "payload": 250, "counterweight": 240, "homeHeight": 1 }
+  ]
+}

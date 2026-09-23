@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>舞台吊杆 Cue 预演台</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>舞台吊杆 Cue 预演台</h1>
+    <div class="controls">
+      <button id="btn-play">▶ 预演</button>
+      <select id="speed">
+        <option value="1">1×</option>
+        <option value="4" selected>4×</option>
+        <option value="8">8×</option>
+      </select>
+      <input id="scrub" type="range" min="0" max="0" step="0.05" value="0">
+      <span id="clock">0.00s</span>
+      <button id="btn-submit" disabled>提交预演</button>
+    </div>
+  </header>
+
+  <main>
+    <aside id="panel-battens">
+      <h2>吊杆</h2>
+      <ul id="batten-list"></ul>
+    </aside>
+
+    <section id="center">
+      <canvas id="stage" width="560" height="440"></canvas>
+      <div id="timeline-wrap">
+        <h2>Cue 时间轴（拖动调整顺序）</h2>
+        <div id="timeline"></div>
+        <div id="conflict-lane"></div>
+        <div id="ruler"></div>
+      </div>
+    </section>
+
+    <aside id="panel-weights">
+      <h2>配重 / 净载荷</h2>
+      <ul id="weight-list"></ul>
+    </aside>
+  </main>
+
+  <section id="bottom">
+    <div id="summary">
+      <h2>预演汇总</h2>
+      <div id="summary-body"></div>
+    </div>
+    <div id="steplog">
+      <h2>逐步计算过程</h2>
+      <pre id="log-body"></pre>
+    </div>
+  </section>
+
+  <script src="/model.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
